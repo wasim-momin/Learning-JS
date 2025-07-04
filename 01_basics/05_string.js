@@ -24,19 +24,19 @@ const projectURL = new String('wAsim-momin.com')
 // console.log(userName.trim())
 
 // console.log(projectURL.split('-'));
-// console.log(projectURL.includes('0'));
+//console.log(projectURL.includes('w'));
 
-// console.log(projectURL.at(4));
+console.log(projectURL.at(4));
 
 console.log(projectURL.charAt(0));
 console.log(projectURL.charCodeAt(1));
 
 // charCodeAt print the ascii value of character
-const regexp = /t(e)(st(\d?))/g;
-const str ="test1test2"
-const resul = [...str.matchAll(regexp)]
-console.log(resul[0]);
-console.log(resul[1]);
-console.log('3',resul[3]);
+// const regexp = /t(e)(st(\d?))/g;
+// const str ="test1test2"
+// const resul = [...str.matchAll(regexp)]
+// console.log(resul[0]);
+// console.log(resul[1]);
+// console.log('3',resul[3]);
 
 
