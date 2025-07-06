@@ -67,11 +67,14 @@ combArray.push("react")
 combArray.push("angular")
 console.log(combArray);
 
-console.log(combArray.slice(0,4));
-console.log(combArray.splice(4,4));
-console.log(Array.from(a));
-console.log(Array.of(a));
-console.log(Array.isArray(a));
-console.log(Array.isArray(combArray));
+// console.log(combArray.slice(0,4));
+// console.log(combArray.splice(4,4));
+// console.log(Array.from(a));
+// console.log(Array.of(a));
+// console.log(Array.isArray(a));
+// console.log(Array.isArray(combArray));
+
+console.log(Array.from({name:"wasim"}))
+
 
 

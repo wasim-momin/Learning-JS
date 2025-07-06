@@ -31,7 +31,7 @@ userList.name = "Wasim Mohammed Rafique"
 // console.log(userList.myFun2());
 
 
-//const userDetails = new Object() // singleton object
+//const userDetails = new Object() // singleton object / constractor
 
 const newUser={
     email:"abc@gmail.com",
@@ -85,7 +85,7 @@ const course ={
 }
 
 const {courseTeacherName: teacher} = course
-console.log(teacher);
+//console.log(teacher);
 
 // {
 //     "name":"wasim",
@@ -95,3 +95,7 @@ console.log(teacher);
 //     {},
 //     {},
 // ]
+const objToArray = Object.entries(userList)
+// console.log(Object.entries(userList));
+// console.log(objToArray);
+// console.log(Array.of(objToArray));
