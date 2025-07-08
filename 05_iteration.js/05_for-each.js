@@ -35,8 +35,18 @@ const myCoding = [
 myCoding.forEach((item, index, arr)=>{
      //console.log(item.languageFileName)
      if (index === 0){
-        console.log(`on 1st position lang name is ${item.languageName}`)
+        //console.log(`on 1st position lang name is ${item.languageName}`)
      }
      
     //  console.log(arr)
 })
+
+// store in variables for each hai koi bhi value return nai karta hai ye undefine karta hai
+const values = coding.forEach( (item) => {
+    console.log(item);
+    if (item === "java"){
+        console.log(`Lang Java is availble`);
+    }
+    return item
+} )
+//console.log(values);
