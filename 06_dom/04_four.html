@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    
+    function addLan(langName){
+        const createLI = document.createElement("li")
+        const langText = document.createTextNode(langName);
+        createLI.appendChild(langText)
+        const ul = document.querySelector(".language")
+        ul.appendChild(createLI)
+    }
+    addLan("HTML")
+    //write a fun in more effency way
+    function optLang(langName){
+        const createLI = document.createElement("li")
+        createLI.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(createLI)
+    }
+    optLang("Css");
+    optLang("Raect");
+    optLang("JS");
+    optLang("golang");
+
+    //edit 
+    const li1 = document.querySelector("li:nth-child(1)");
+    const newLi1 = document.createElement("li")
+    newLi1.textContent = "js"
+    li1.replaceWith(newLi1)
+
+    //edit with dynamic func
+    function editLangName (langName, childNumber){
+        const li2 = document.querySelector(`li:nth-child(${childNumber})`);
+        const newLi = document.createElement("li")
+        newLi.textContent = langName;
+        li2.replaceWith(newLi)
+    }
+    editLangName("HTML-5", 2)
+    editLangName("CSS 3", 3)
+
+    //replace hole html
+    const li5 = document.querySelector("li:nth-child(5)")
+    li5.outerHTML = "<li>Type Script </li>"
+
+    //remove
+    // const removeLi = document.querySelector("li:last-child")
+    // removeLi.remove()
+
+    //usning fun
+    const removeLiFun = (liNumber)=>{
+        const removeLi = document.querySelector(`li:nth-child(${liNumber})`)
+        removeLi.remove()
+    }
+    removeLiFun(5)
+
+</script>
+</html>
