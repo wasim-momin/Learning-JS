@@ -46,15 +46,27 @@
     //     console.log("google clicked");
     // }, false)
    
+    const ul = document.querySelector('#images')
+    const ulAll = document.querySelectorAll('#images')
+    console.log(ul);
+    console.log(ulAll);
     
-    document.querySelector('#images').addEventListener('click',function(e){
-        const removeLi = e.target.parentNode
-        if(e.target.tagName === 'IMG'){
-        removeLi.remove()
-        console.log(removeLi);
-        }  
+    // ul.addEventListener('click',function(e){
+    //     const removeLi = e.target.parentNode
+    //     if(e.target.tagName === 'IMG'){
+    //     removeLi.remove()
+    //     console.log(removeLi);
+    //     }  
+    // })
+    // using query select all
+    ulAll.forEach((ul)=>{
+        ul.addEventListener('click', function(e){
+            const removeLi = e.target.parentNode;
+            if(e.target.tagName === 'IMG'){
+                removeLi.remove()
+            } 
+        })
     })
-    
     //removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
