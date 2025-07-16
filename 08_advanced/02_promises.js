@@ -98,13 +98,25 @@
 //     }
 // }
 // getAllUsers()
-const requestURL = 'https://jsonplaceholder.typicode.com/users'
-fetch(requestURL)
-.then((response)=>{
-    console.log(response);
-    return response.json()
-})
-.then((data)=>{
-    console.log(data);
-})
-.catch((error)=>console.log(error))
+//const requestURL = 'https://jsonplaceholder.typicode.com/users'
+// fetch(requestURL)
+// .then((response)=>{
+//     console.log(response);
+//     return response.json()
+// })
+// .then((data)=>{
+//     console.log(data);
+// })
+// .catch((error)=>console.log(error))
+
+async function userInfo (){
+    try{
+        const requestURL = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await requestURL.json()
+        console.log('data list', data);
+        
+    } catch(error){
+        console.log(error);
+    }
+}
+userInfo()
