@@ -4,9 +4,9 @@ function numBy5(num){
 
 numBy5.power = 5
 
-console.log(numBy5(5));
-console.log(numBy5.power);
-console.log(numBy5.prototype);
+// console.log(numBy5(5));
+// console.log(numBy5.power);
+// console.log(numBy5.prototype);
 
 function chaiInfo(name, price){
     this.name = name
@@ -20,8 +20,25 @@ chaiInfo.prototype.printMe = function(){
 const chai = new chaiInfo("chai", 20)
 const tea = new chaiInfo("Tea", 200)
 
-chai.printMe()
-tea.printMe()
+// chai.printMe()
+// tea.printMe()
+
+
+// using constructor
+class chaiInfoClass{
+    constructor(name, price){
+        this.name = name
+        this.price = price
+    }
+
+    printMeClass(){
+        console.log(`using constructor => ${this.name} - ${this.price}`);
+    }
+}
+const chaiClas = new chaiInfoClass("chai", '123')
+
+console.log(chaiClas.printMeClass());
+
 
 /*
 
