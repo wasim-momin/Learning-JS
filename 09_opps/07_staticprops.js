@@ -1,3 +1,4 @@
+//in some cases you dont want to give access of any methodas or function that use the static keyword
 class User {
     constructor(name) {
         this.name = name
