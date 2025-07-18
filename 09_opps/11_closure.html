@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #313131;">
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <button id="blue">Blue</button>
+    <button id="orange">Orange</button>
+    <button id="purple">Purple</button>
+    <button id="reset">Reset</button>
+</body>
+<script>
+    // document.getElementById("orange").onclick = function(){
+    //         document.body.style.backgroundColor = `orange`
+    //     }
+    //     document.getElementById("green").onclick = function(){
+    //         document.body.style.backgroundColor = `green`
+    //     }
+
+    function colorChanger(color) {
+        // document.body.style.backgroundColor = `${color}`
+        function handleColorChnage() {
+            document.body.style.backgroundColor = `${color}`
+        }
+        return handleColorChnage
+    }
+
+    // document.getElementById('orange').onclick = colorChanger("orange")
+    // document.getElementById('green').onclick = colorChanger("green")
+
+    const colors = ["red", "green", "blue", "orange", "purple"];
+
+    colors.forEach((colorId)=>{
+        document.getElementById(colorId).onclick = colorChanger(colorId)
+    })
+    document.getElementById("reset").onclick = function(){
+        document.body.style.backgroundColor = "#313131"
+    }
+
+</script>
+<script>
+    // function init() {
+    //     let name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+</script>
+</body>
+
+</html>
